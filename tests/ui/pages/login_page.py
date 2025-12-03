@@ -91,6 +91,10 @@ class LoginPage(BasePage):
     def assert_login_successful(self):
         """Assert login was successful"""
         self.wait_for_url("**/dashboard/index", timeout=10000)
+        # Now handle the dashboard modal before asserting
+        from tests.ui.pages.dashboard_page import DashboardPage
+        dashboard = DashboardPage(self.page)
+        dashboard.handle_first_login_modal()
         self.assert_url_contains("/dashboard")
         logger.info("✅ Login successful")
 
