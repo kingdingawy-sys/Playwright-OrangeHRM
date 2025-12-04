@@ -29,7 +29,7 @@ jobs:
           playwright install --with-deps chromium
 
       - name: Create reports directory
-        run: mkdir -p reports/screenshots reports/videos reports/traces
+        run: mkdir -p reports reports/screenshots reports/videos reports/traces
 
       - name: Run UI Tests
         run: |

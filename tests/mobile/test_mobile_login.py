@@ -4,14 +4,7 @@ from tests.mobile.pages.mobile_login_page import MobileLoginPage
 
 
 def test_mobile_login_success(mobile_page):
-    """
-    Test successful login on OrangeHRM using iPhone 14 Pro emulation.
-    This test verifies:
-    - Page loads correctly in mobile view
-    - User can log in
-    - User is redirected to dashboard
-    - A key dashboard element is visible (proving login succeeded)
-    """
+
     # Arrange
     mobile_page.goto(BASE_URL)
     login_page = MobileLoginPage(mobile_page)

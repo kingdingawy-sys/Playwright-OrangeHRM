@@ -4,11 +4,7 @@ from tests.mobile.pages.mobile_dashboard_page import MobileDashboardPage
 
 
 def test_mobile_dashboard_elements_visible(mobile_page):
-    """
-    Verify that key dashboard elements are visible when accessed via mobile emulation.
-    Since OrangeHRM Demo does not fully switch to a mobile-specific UI,
-    we verify core content that should appear regardless of viewport size.
-    """
+
     # Arrange: Navigate and log in
     mobile_page.goto(BASE_URL)
     login_page = MobileLoginPage(mobile_page)
